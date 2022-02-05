@@ -36,15 +36,33 @@ function calculationsEvent(e){
     e.preventDefault();
 
     var question_one= document.getElementsByName('action');
+    var question_two= document.getElementsByName('action2');
+    var question_three= document.getElementsByName('action3');
+    var question_four= document.getElementsByName('action4');
+    var question_five= document.getElementsByName('action5');
+    var quiz= [question_one, question_two,question_three,question_four,question_five];
+    var hey=[];
 
-    for(var i=0; i<question_one.length;i++){
-        if(question_one[i].checked){
-            console.log(question_one[i].value);
+
+
+    for(var i=0; i<quiz.length;i++){
+        for( var j=0; j<quiz[i].length;j++){
+                // console.log(quiz[i][j].value);
+
+            if(quiz[i][j].checked){
+                hey.push(quiz[i][j].value);
+            }
         }
+
+        var question_form = document.getElementById('test_container');
+        question_form.style.display='none';
+
+        
         
     }
 
 
+    console.log(hey);
 
 }
 

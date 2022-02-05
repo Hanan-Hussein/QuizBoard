@@ -2,7 +2,11 @@ console.log('help');
 var send_btn= document.getElementById('starttest');
 send_btn.addEventListener('click',sendEvent);
 
-
+/**
+ * This function saves the user's name to the local storage 
+ * and hides the landing page to make room for the form
+ * @param {Text} e is the event listener
+ */
 
 function sendEvent(e){
     e.preventDefault();

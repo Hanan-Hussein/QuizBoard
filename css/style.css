@@ -32,7 +32,7 @@
     border-radius: 16px;
 }
 
-form{
+ .first_form{
     display: flex;
     align-content: center;
     align-items: center;
@@ -40,4 +40,46 @@ form{
 }
 .welcomemsg{
     height: 100vh;
+}
+.warm_message{
+    color: green;
+    font-size: 24px;
+    padding-bottom: 25px;
+}
+.setone{
+    display: flex;
+    flex-direction: column;
+}
+.questions{
+padding-bottom: 20px;
+}
+.choices{
+    padding-bottom: 15px;
+}
+
+.test_form{
+    display: flex;
+    justify-content: space-around;
+
+}
+.tests{
+    color: #E48257;
+}
+.javascript_header{
+    color: green;
+    text-align: center;
+    font-size: 35px;
+    font-style: italic;
+}
+
+.form-check-input[type='radio']{
+
+border: 2px solid #E48257;
+}
+.form-check-input:checked {
+    background-color: #E48257;
+    border-color: #E48257;
+}
+#questions_btn{
+    background-color: #E48257;
 }

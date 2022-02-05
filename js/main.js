@@ -11,8 +11,11 @@ send_btn.addEventListener('click',sendEvent);
 function sendEvent(e){
     e.preventDefault();
     // console.log('Event type'+e.type);
-    var ss = document.getElementById('dd');
-    ss.style.display='none';
+    var welcomepage = document.getElementById('dd');
+    var question_form = document.getElementById('test_container');
+
+    welcomepage.style.display='none';
+    question_form.style.display='initial';
     var username=document.getElementById('name_edit').value;
 
     // localStorage.removeItem('name');

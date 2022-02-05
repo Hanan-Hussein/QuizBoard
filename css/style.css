@@ -83,3 +83,6 @@ border: 2px solid #E48257;
 #questions_btn{
     background-color: #E48257;
 }
+#test_container{
+    display: none;
+}

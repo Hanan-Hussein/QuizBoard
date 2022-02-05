@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#welcomemsg{
+    display: flex;
+    justify-content: space-evenly;
+}
+.introductory{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 60px;
+}
+.code_icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+#starttest{
+    background-color: #E48257;
+    margin-top: 15px;
+    width: 20vw;
+
+}
+#name_edit{
+    width: 40vw;
+    border-radius: 16px;
+}
+
+form{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.welcomemsg{
+    height: 100vh;
+}

@@ -83,7 +83,7 @@ border: 2px solid #E48257;
 #questions_btn{
     background-color: #E48257;
 }
-#test_container{
+#test_container, #excellently_container, #fairly_container,#fail_container{
     display: none;
 }
 .excellently_passed{

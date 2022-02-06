@@ -2,10 +2,9 @@ var send_btn= document.getElementById('starttest');
 var question_btn=document.getElementById('questions_btn');
 send_btn.addEventListener('click',sendEvent);
 question_btn.addEventListener('click',calculationsEvent);
-var passed_panda = document.getElementById('excellently_container');
-var average_panda = document.getElementById('fairly_container');
-var failed_panda =document.getElementById('fail_container');
-
+var passedPanda = document.getElementById('excellently_container');
+var averagePanda = document.querySelector('#fairly_container');
+var failedPanda =document.querySelector('#fail_container');
 
 var score =0;
 var answers=['Three','Function','onLoad()','head','Script'];
@@ -66,20 +65,51 @@ for (var h=0; h<answers.length; h++){
                 }
         }
 
-        var question_form = document.getElementById('test_container');
-       
-        question_form.style.display='none';
-        
+    
 
         
         
     }
 }
+var question_form = document.getElementById('test_container');
+       
+   question_form.style.display='none';
 
-        console.log( grading(score));
-        console.log(score);
-        console.log(answers);
-        console.log(checked_answers);
+
+        var total = grading(score);
+        // console.log(total);
+        if(total>=80){
+            var name= localStorage.getItem('name');
+            var passedChild=document.getElementById("passedUsername"); 
+            var percentageValue=document.getElementById("percentage");        
+            passedChild.textContent=name+'\'s';
+            percentageValue.textContent=String(total);
+
+            passedPanda.style.display='initial'
+        } else if(total>=50){
+            var name= localStorage.getItem('name');
+            var passedChild=document.getElementById("averageUsername"); 
+            var percentageAverage=document.getElementById("percentage_average");        
+            passedChild.textContent=name+'\'s';
+            percentageAverage.textContent=String(total);
+
+            averagePanda.style.display='initial'
+        }
+        else{
+            var name= localStorage.getItem('name');
+            var passedChild=document.getElementById("averageUsername"); 
+            var percentagFail=document.getElementById("percentageFail");        
+            passedChild.textContent=name+'\'s';
+            percentagFail.textContent=String(total);
+
+            failedPanda.style.display='initial'
+        }
+
+
+        // console.log(score);
+        // console.log(answers);
+        // console.log(checked_answers);
+
 
 
 }
@@ -87,7 +117,7 @@ for (var h=0; h<answers.length; h++){
 
 function grading (x){
 
-var grade= x/answers.length*100;
-return (grade+" %");
+ var grade= x/answers.length*100;
+return (grade);
 
 }

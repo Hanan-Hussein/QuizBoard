@@ -1,19 +1,21 @@
-var send_btn= document.getElementById('starttest');
-var question_btn=document.getElementById('questions_btn');
+var sendBtn= document.getElementById('starttest');
+var questionBtn=document.getElementById('questions_btn');
 var passedPanda = document.getElementById('excellently_container');
 var averagePanda = document.querySelector('#fairly_container');
 var failedPanda =document.querySelector('#fail_container');
+var tryAgain1 = document.getElementById('tryAgain1');
 var tryAgain2 = document.getElementById('tryAgain2');
 var tryAgain3 = document.getElementById('tryAgain3');
 
-send_btn.addEventListener('click',sendEvent);
-question_btn.addEventListener('click',calculationsEvent);
+sendBtn.addEventListener('click',sendEvent);
+questionBtn.addEventListener('click',calculationsEvent);
+tryAgain1.addEventListener('click',tryAgainEvent);
 tryAgain2.addEventListener('click',tryAgainEvent);
 tryAgain3.addEventListener('click',tryAgainEvent);
 
 
 var score =0;
-var answers=['Three','Function','onLoad()','head','Script'];
+var answers=['Two','Function','onClick()','head','script'];
 
 var checked_answers =[];
 

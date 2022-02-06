@@ -2,6 +2,9 @@ var send_btn= document.getElementById('starttest');
 var question_btn=document.getElementById('questions_btn');
 send_btn.addEventListener('click',sendEvent);
 question_btn.addEventListener('click',calculationsEvent);
+var passed_panda = document.getElementById('excellently_container');
+var average_panda = document.getElementById('fairly_container');
+var failed_panda =document.getElementById('fail_container');
 
 
 var score =0;
@@ -64,13 +67,16 @@ for (var h=0; h<answers.length; h++){
         }
 
         var question_form = document.getElementById('test_container');
+       
         question_form.style.display='none';
+        
 
         
         
     }
 }
 
+        console.log( grading(score));
         console.log(score);
         console.log(answers);
         console.log(checked_answers);
@@ -79,4 +85,9 @@ for (var h=0; h<answers.length; h++){
 }
 
 
+function grading (x){
 
+var grade= x/answers.length*100;
+return (grade+" %");
+
+}

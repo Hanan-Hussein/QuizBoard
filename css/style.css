@@ -86,3 +86,27 @@ border: 2px solid #E48257;
 #test_container{
     display: none;
 }
+.excellently_passed{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+.displaytext{
+    color: #3A6351;
+    font-size: 28px;
+}
+.resulttest{
+    color: #E48257;
+
+}
+.passed_panda img{
+    width: 25vw;
+}
+
+.average_panda img{
+    width: 20vw;
+}
+.resultmsg{
+text-align: center;
+}

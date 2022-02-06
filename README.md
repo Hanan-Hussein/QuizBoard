@@ -1,4 +1,4 @@
-# H - Insurance Website
+# QUIZ BOARD
 ##### By Hanan Hussein Ibrahim
 ### A website for a quiz board game
 
@@ -15,7 +15,9 @@
 
 
 ## Description
-<p>This website is a quiz board meant to test your skills in Java Script and grades based on your performance</p>
+<p>This is a Java script quiz meant to test one's skill in the course. It takes the user's answer and calculates the grade 
+giving feedback
+</p>
 
 ## Installation
 

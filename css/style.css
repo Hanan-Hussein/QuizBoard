@@ -111,3 +111,7 @@ border: 2px solid #E48257;
 .resultmsg{
 text-align: center;
 }
+.form-check-input:checked {
+    background-color: #E48257; 
+     border-color: #E48257;
+}

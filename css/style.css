@@ -6,14 +6,15 @@
 
 #welcomemsg{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
 }
 .introductory{
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
-    margin: 0 60px;
+    align-items: center; */
 }
 .code_icons{
     display: flex;
@@ -29,13 +30,18 @@
 
 }
 #name_edit{
-    width: 40vw;
-    border-radius: 16px;
+    width: 42vw;
+    height: 10vh;
+    border-radius: 28px;
 }
 
  .first_form{
     display: flex;
     align-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     align-items: center;
     flex-direction: column;
 }
@@ -119,3 +125,28 @@ text-align: center;
     background-color: #E48257; 
      border-color: #E48257;
 }
+.code_icon2{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 41px;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+}
+
+.icon1{
+    position: relative;
+    bottom: 44px;
+    right: 77px;
+    
+}
+.icon2{
+    position: relative;
+    position: relative;
+    top: 187px;
+    right: 100px;
+}
+.icon3{
+    position: relative;
+    bottom: 126px;}

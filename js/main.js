@@ -26,7 +26,7 @@ var checked_answers =[];
 function sendEvent(e){
     e.preventDefault();
     // console.log('Event type'+e.type);
-    var welcomepage = document.getElementById('dd');
+    var welcomepage = document.getElementById('formPage');
     var question_form = document.getElementById('test_container');
 
     welcomepage.style.display='none';

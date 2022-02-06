@@ -10,12 +10,6 @@
     align-content: center;
     align-items: center;
 }
-.introductory{
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center; */
-}
 .code_icons{
     display: flex;
     flex-direction: column;
@@ -27,6 +21,7 @@
     margin-top: 50px;
     width: 20vw;
     border-radius: 5px;
+    font-size: large;
 
 }
 #name_edit{
@@ -50,7 +45,8 @@
 }
 .warm_message{
     color: green;
-    font-size: 24px;
+    font-size: 44px;
+    font-weight: 700px;
     padding-bottom: 25px;
 }
 .setone{
@@ -150,3 +146,34 @@ text-align: center;
 .icon3{
     position: relative;
     bottom: 126px;}
+
+    @media only screen and (max-width:600px) {
+    *{
+        overflow-x: hidden;
+    }
+    #name_edit{
+        width: 70vw;
+        height: 10vh;
+        border-radius: 28px;
+        font-weight: 27px;
+    }
+    .icon1{
+        position: relative;
+        bottom: 10px;
+        right:57px;
+    }
+    .icon2{
+        display: none;
+    }
+    .icon3{
+        bottom: 29px;        
+    }
+    #starttest{
+        width: 37vw;
+        height: 6vh;
+        font-size:24px
+    }
+    .warm_message {
+        font-size: 47px;
+    }
+}

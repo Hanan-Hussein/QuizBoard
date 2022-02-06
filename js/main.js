@@ -3,14 +3,11 @@ var question_btn=document.getElementById('questions_btn');
 var passedPanda = document.getElementById('excellently_container');
 var averagePanda = document.querySelector('#fairly_container');
 var failedPanda =document.querySelector('#fail_container');
-var tryAgain = document.getElementById('tryAgain1');
 var tryAgain2 = document.getElementById('tryAgain2');
 var tryAgain3 = document.getElementById('tryAgain3');
 
-
 send_btn.addEventListener('click',sendEvent);
 question_btn.addEventListener('click',calculationsEvent);
-tryAgain.addEventListener('click',tryAgainEvent);
 tryAgain2.addEventListener('click',tryAgainEvent);
 tryAgain3.addEventListener('click',tryAgainEvent);
 
@@ -40,9 +37,6 @@ function sendEvent(e){
 
     localStorage.setItem('name', username);
 
-
-
-
 }
 
 function calculationsEvent(e){
@@ -54,39 +48,26 @@ function calculationsEvent(e){
     var question_four= document.getElementsByName('action4');
     var question_five= document.getElementsByName('action5');
     var quiz= [question_one, question_two,question_three,question_four,question_five];
-    var hey=[];
-for (var h=0; h<answers.length; h++){
-    // console.log("dddddddd"+answers[h]);
-
-
-    for(var i=0; i<quiz.length;i++){
-        for( var j=0; j<quiz[i].length;j++){
-
-                if(quiz[i][j].checked){
-                    
-                    // console.log(quiz[i][j].value);
-                    if(quiz[i][j].value === answers[h]){
-                        // console.log(quiz[i][j].value);
-                        checked_answers.push(quiz[i][j].value)
-                          score++;
-                          
-                      }
-                }
-        }
-
     
-
-        
-        
+    for (var h=0; h<answers.length; h++){
+        for(var i=0; i<quiz.length;i++){
+            for( var j=0; j<quiz[i].length;j++){
+                if(quiz[i][j].checked){
+                    if(quiz[i][j].value === answers[h]){
+                        checked_answers.push(quiz[i][j].value)
+                        score++;
+                          
+                    }
+                }
+            } 
+        }
     }
-}
 var question_form = document.getElementById('test_container');
        
    question_form.style.display='none';
 
 
         var total = grading(score);
-        // console.log(total);
         if(total>=80){
             var name= localStorage.getItem('name');
             var passedChild=document.getElementById("passedUsername"); 
@@ -113,21 +94,13 @@ var question_form = document.getElementById('test_container');
 
             failedPanda.style.display='initial'
         }
-
-
-        // console.log(score);
-        // console.log(answers);
-        // console.log(checked_answers);
-
-
-
 }
 
 
 function grading (x){
 
  var grade= x/answers.length*100;
-return (grade);
+ return (grade);
 
 }
 

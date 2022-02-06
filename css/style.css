@@ -23,8 +23,9 @@
 }
 #starttest{
     background-color: #E48257;
-    margin-top: 15px;
+    margin-top: 50px;
     width: 20vw;
+    border-radius: 5px;
 
 }
 #name_edit{

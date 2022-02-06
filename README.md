@@ -13,6 +13,7 @@
 
 ## Description
 <p>This is a website for an after school club that tests the users on their knowledge in Javascript.This website grades the users and displays their results and also gives the user an opportunity to redo the quiz.
+  Find the design for the project https://www.figma.com/file/PQv7gkoAJswPhlEhG1DWVi/Quiz-Board?node-id=0%3A1
 </p>
 
 ## Installation

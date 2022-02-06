@@ -12,7 +12,7 @@
 + [Technology Used](#technology-used)
 + [Reference](#reference)
 + [Authors Info](#Authors-Info)
-+ [Known Bugs](#Known-Bugs)
+
 
 ## Description
 <p>This website is a quiz board meant to test your skills in Java Script and grades based on your performance</p>
@@ -38,10 +38,6 @@
 ## Reference
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 * [HTML](https://developer.mozilla.org/en-US/docs/Glossary/HTML)
-
-## Known Bugs
-
-
 
 [Go Back to the top](#By-Hanan-Hussein-Ibrahim)
 

@@ -133,9 +133,11 @@ return (grade);
 
 function tryAgainEvent(e){
     e.preventDefault();
-    console.log("clicked");
-    var questionForm = document.getElementById('test_container');
-    questionForm.style.display='initial';
+    var questionContainer = document.getElementById('test_container');
+    var questionForm = document.getElementById('questionForm');
+    questionForm.reset();
+    score=0;
+    questionContainer.style.display='initial';
     averagePanda.style.display='none';
     failedPanda.style.display='none'
     passedPanda.style.display='none';

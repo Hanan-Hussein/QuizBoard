@@ -5,7 +5,9 @@ question_btn.addEventListener('click',calculationsEvent);
 
 
 var score =0;
-var answers=['Three','Function','onLoad()','head','Script']
+var answers=['Three','Function','onLoad()','head','Script'];
+
+var checked_answers =[];
 
 /**
  * This function saves the user's name to the local storage 
@@ -42,16 +44,23 @@ function calculationsEvent(e){
     var question_five= document.getElementsByName('action5');
     var quiz= [question_one, question_two,question_three,question_four,question_five];
     var hey=[];
-
+for (var h=0; h<answers.length; h++){
+    // console.log("dddddddd"+answers[h]);
 
 
     for(var i=0; i<quiz.length;i++){
         for( var j=0; j<quiz[i].length;j++){
-                // console.log(quiz[i][j].value);
 
-            if(quiz[i][j].checked){
-                hey.push(quiz[i][j].value);
-            }
+                if(quiz[i][j].checked){
+                    
+                    // console.log(quiz[i][j].value);
+                    if(quiz[i][j].value === answers[h]){
+                        // console.log(quiz[i][j].value);
+                        checked_answers.push(quiz[i][j].value)
+                          score++;
+                          
+                      }
+                }
         }
 
         var question_form = document.getElementById('test_container');
@@ -60,10 +69,14 @@ function calculationsEvent(e){
         
         
     }
+}
 
+        console.log(score);
+        console.log(answers);
+        console.log(checked_answers);
 
-    console.log(hey);
 
 }
+
 
 

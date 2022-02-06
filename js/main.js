@@ -1,10 +1,14 @@
 var send_btn= document.getElementById('starttest');
 var question_btn=document.getElementById('questions_btn');
-send_btn.addEventListener('click',sendEvent);
-question_btn.addEventListener('click',calculationsEvent);
 var passedPanda = document.getElementById('excellently_container');
 var averagePanda = document.querySelector('#fairly_container');
 var failedPanda =document.querySelector('#fail_container');
+var tryAgain = document.getElementById('direction1');
+
+
+send_btn.addEventListener('click',sendEvent);
+question_btn.addEventListener('click',calculationsEvent);
+tryAgain.addEventListener('click',tryAgainEvent);
 
 var score =0;
 var answers=['Three','Function','onLoad()','head','Script'];
@@ -97,7 +101,7 @@ var question_form = document.getElementById('test_container');
         }
         else{
             var name= localStorage.getItem('name');
-            var passedChild=document.getElementById("averageUsername"); 
+            var passedChild=document.getElementById("failUsername"); 
             var percentagFail=document.getElementById("percentageFail");        
             passedChild.textContent=name+'\'s';
             percentagFail.textContent=String(total);
@@ -120,4 +124,14 @@ function grading (x){
  var grade= x/answers.length*100;
 return (grade);
 
+}
+
+    function tryAgainEvent(e){
+        e.preventDefault();
+        console.log("clicked");
+        var questionForm = document.getElementById('test_container');
+        questionForm.style.display='initial';
+        // averagePanda.style.display='none';
+        failedPanda.style.display='none'
+        // passedPanda.style.display='none';
 }

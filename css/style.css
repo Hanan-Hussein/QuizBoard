@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    /* overflow-x: hidden; */
 }
 
 #welcomemsg{
@@ -93,6 +94,9 @@ border: 2px solid #E48257;
 #test_container, #excellently_container, #fairly_container,#fail_container{
     display: none;
 }
+#test_container{    
+    overflow-x: hidden;
+}
 .excellently_passed{
     display: flex;
     justify-content: space-around;
@@ -147,7 +151,39 @@ text-align: center;
     position: relative;
     bottom: 126px;}
 
-    @media only screen and (max-width:600px) {
+
+.formImage1{
+    position: relative;
+}
+.collectionImages1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.formImage2{
+    position: relative;
+    bottom: 326px;
+    right: 38px;
+}
+.formImage3{
+    position: relative;
+    top: -6px;
+    left: 23px;
+}
+.formImage4{
+    position: relative;
+    left: 50%;
+    top: 37%;
+}
+.formImage1{
+    width: 15px;
+}
+
+.formImage1 img, .formImage2 img, .formImage3 img, .formImage3 img, .formImage4 img{
+    width: 10vw;
+}
+ 
+@media only screen and (max-width:600px) {
     *{
         overflow-x: hidden;
     }
@@ -176,4 +212,10 @@ text-align: center;
     .warm_message {
         font-size: 47px;
     }
+    .collectionImages1, .collectionImages2{
+        display: none;
+    }
+   
+ 
+   
 }
